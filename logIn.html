@@ -1,0 +1,63 @@
+<!-- Contact page -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ABOUT US- BRIDGE MEDIA </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+<div id="header">
+    <img src="images/BRIDGE.png"/>
+</div>
+
+<div id="top-tabs">
+    <a href="home.html">Home</a>
+    <a href="">Login</a>
+    <a href="aboutUs.html">About Us</a>
+    <a href="contactUs.html">Contact Us</a>
+</div>
+    
+    
+    <!-- LOGIN -->
+<div id="container3">
+
+    <div id="login">
+        <p> Welcome back. Please log in </p>
+<form onsubmit="return verifyUser(event)">
+    <label for="usernameInput">Username:</label>
+    <input type="text" id="usernameInput"/><br/>
+    <label for="passwordInput">Password:</label>
+    <input type="password" id="passwordInput"/><br/>
+    <p id="message"></p>
+    <br><br/>
+    <button type="submit">Please Log In</button>
+</form>
+
+<script>
+    function verifyUser(event){
+        event.preventDefault(); // Prevent form from submitting
+        var username = document.getElementById("usernameInput").value;
+        var password = document.getElementById("passwordInput").value;
+
+        if (username == "khulasande" && password == "4310") {
+            document.getElementById("message").innerHTML = "Correct. Logging you in...";
+            window.location.href = "loginActulPage.html"; // Redirect if correct
+        } else {
+            document.getElementById("message").innerHTML = "Incorrect username or password. Please try again.";
+        }
+        return false;
+    }
+</script>
+</div>
+    </div>
+
+    <!-- Footer -->
+     <div id="footer">
+    <footer>
+        <p>&copy; 2023 Bridge Media. All rights reserved.</p>
+    </footer>
+    </div> 
+</body>
+</html>
